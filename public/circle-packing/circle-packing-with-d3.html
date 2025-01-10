@@ -1,0 +1,259 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=circle-packing-with-d3&code=CQOg7gFgpgdgFAKAARNAcygFzgJQPJ4AqA-gAoCChAEkgNRIDkA9ACYCGmbTbAzj1qw5cA9gAdMAS2EwAtADcJUMCABWPaQwCUAGmSoQGTAGUAxgCcJ4xChQMImTKJ4AuJkwBmvTABsAnqp4WKG8JOTMQGAEYUQBbVgBmGQhFMzYzEwhfAAEAJhAABgLWCR5MBKSUtIz_GIkYAIY9TQRNEBZpKDh3AFcYE0lpJDgzKB5NJABvPTNe4dGAbXyAXU0AbgQAXzWEHr6BmCQZ-FSwABEhcamUE2lSpHZOAHVU0SQAXiRREdE0qHPOYZsM4XdYoOoSTAAYQgaWwDzYzzYohA_Aso3-bG09yEiORMTYAA9TlBxBBthsdr1-lIDl8Sb8MYDgZxLnobjA7qjFDwMe8kPMlqCkN4sEh8USSZgIHz8kLdtTBuy5FAzNh1N10lAsQAjXhQUgcCBYoKk1k2JASdxDdWa94fGDdbzeM3mw5YDUwIUoCnmy1DcXE0lIAB8SAArC7zSNMB6vUgfTYA5LpR8ALKGkDiuAmqVYpOmuNc9FCECibo8CBwK6uiQsZxIXX8A25vTmuRsbzdKD1m0mKAgYA3XqYXSu-7J-s5o2tmx1IIEnsq7kYkAimBoKUzrZx9zCMxDdv7gDWUF8FoOvagkdnVrgl5AMJ4eDAMFIZjEKswvjgJ984wAZP-SAAIS_pmHAZHATAAHoADrAEwmjXm2aSfIafKNvq6H0AwIAMHQSC_nG5pKp-d7CBqfbzL-SxYj8ubjkG9AAIzbGOCbenoCakaqTIYliDBiPsDBYvkbFujGZgHNWKBFjyQiLmi8mcKOiaEoGUr1vmm7eusFLyvs54QtCsJ3kuxYqWK6nJi6h73CUojeGwvg4MIwiYHypSpJI7jfuJBk0kgXkcJafmTDO0Yevc8QzigKKYN5oVwM0Y6lr8MCYAAkiwXRUoZ2bITYkVSfcIC1ii3Tal5dRoHA-TGmVLCrl4mUwPOeDuHAuFaOJ5pbGZSkYilroVTEuV7IFBXhWOKDFQcTXtp2UBIAAPitSCyrF8bDeaKJ7tgAWDHAmINoVs3uiV2ogItXZIDISBsNdHZdsR21Cgmh0HMIyqpE6AAyzkUdgPypDEPBYkiEjXnZ7KYFABIeR8INsGDICw_DmBxiwMWpT8JhHslW0ohIABenTzJDBhYI8tZSsld1IMxABsEOiBIVOYFQUASGg9j0_dzMrETPwsCwNVwPEmjZg5TkuW5mC9Ug6MIxEwhBDwfITBsWMy85rnuW0ox9m1bAZTwyUgLuZgAKJsJBn1DDAataue86FcrmCq-r8xO0EjVLHyvtQHG25cXoDsjG1KqZXDY3I2DrNQ9NNgw9IcMI3y8c8GjacY3GbhIHgMB-PcwhIFKHDCoD3QedIfbnkgUB29KkgxMtAAG_CYHg4g0u3SsdiKTUzn6cDAR7zW-ED7u5yrstA3yCUvVt30qoPANTzXcBZ4niscUgdlB82KYPWzT1LV1tZaHGh_O3yE9BzwPvO8fgoj7ewFB4VBc4FAQT7k7KUNUQBbTmiHGcdkSh_SblaD4n9nZo2SN4FgkdVrrXgX7DIEhkGR1XLADcEAb6oV3CYcsgclBIAAKp1EwPEHI5AzCpG_FtIOhseDG3YGbC2-JRDjQVAcOAX9k5jjmkgVh8IypRwJK9LYM5Fa3yCAAORRstD4UCYFbQAPxiJfoaLau0eAhD7II3RUpmqlFau1Tq3VxgsR2jNFEjkIRQTgJot48xyAyAAFpLHmNBTxPjNBMDQPY1KKhhB1C6rBGAWgtr1gYAwIh-4SY5D5JTG6nQGBTi0EgAAVEgHIcZREyRsF-UQ3ZGAmAkOkEUIktokPLPWBp4MtoViRBUkpJEFw6L9gSVSY4TC-HrKw3w_TXRmGGQgswW0NhjJQAlU2PAIQ0nrPMBgbTykMFoltFJ9YUlzPLhjSEucMr1k6aU3w5T4np0wHUmaQUvwijOfomwBcFkcmWdIes6i2BWm0QwXcGUjCkygPhYZjpvAHPNDcyZSiVFQpsICzAAAxFG2ChmMAYRIDsdz7lIDALTCAsL-z7nycxEA8QEUoFXmYdw3hhBgGuUcEwHBQVUqQEi4FZNiUgH3EwJAOMZqzJeVAGIohHwlGeXih5vgnnCLxTSulDLwVOnZSgTlIL6zpjMVmVhfKBVYmYjkUJrp959RmQcm5xyYDuB5lKmaohhBLP2PEuoSygiNHYgc0osqOkvNtU6es6SSjdA7F1G49KzCxK9VtUV4reCSvleaH1crznmiRai2ofh4lYpxeyjV3LGY5HZW09oYAABCnYJkFPqi82SMIy0dXcF3AAGvWSldagoNoZU2ruABNesYYS3drAMcyN8SzBoF1HVbQ9U50Us0J6oVMytzvT0EJQKHwSnwi7va5NFFNSKWXEILcYzMBuW8JIUQZzhVthDR2dM17-RbTTV25VHKOz8ARbUGA9Za33PFFpaypIEVizbh8r5jBskIrqDgU2GA90zQjXuVZDAADE-R8hMz_iwESjA0NQHyO4Yj7gtkvLNfGGc2zzQQBpRvFUhAIAjArMIZB9ZWq2pgBCUZM45KIfmZcipDBSGlGEDEXFUZYD_xjqK-skdpOxwOV8YQaBmNLOVH-g5Nw9xixgKyowvhSiycYE7SIEmbCwBuEEfjpSL1XviRk8zvpY7KLbq63DK7zW6T0DEXwJlVQoiwD3fYcAN3SHEr5_zntpDhqMUePDEwgrmR4JY-Gf74xYgdtvNIKMxjypQdg7wpwGXwCzm0EstZxKh3VXlQKBWnTFZfHATgk6sCKOdtla8YseCOT1vLTyCyfJ-TjKPFrhh2tBGyiBe0ELCrdd63LdyfJ5uy31p7dWHDTaYHNq0TjOUstCNfaI8RFWWB2g-GNtrHWWAyL3jOAu5By4WHxuXMudJlQZWihUNe6RMgcvfDEA-JRlnrjQpHbbDcgEaw7GgPcEIIAxBAeaFbfWDYg1gIjMREK4yRZhAFruwWaRVi2jurANnZIHr7EeiybBPM2Gq5RlAP9Rhk6VnFpAgwpTLW1E5GAR4HojEej5vzePPaGC8WYC2MXhNxbw1lqAH2FbytHsBBXGOQCXaV-c-rRWSvJXAd6ckQA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 100%"></div>
+
+<script type="text/javascript" src="https://registry.npmmirror.com/jquery/3.7.1/files/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.6.0/files/dist/echarts.min.js"></script>
+
+<!-- Uncomment this line if you want to dataTool extension
+<script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.6.0/files/dist/extension/dataTool.min.js"></script>
+-->
+<!-- Uncomment this line if you want to use gl extension
+<script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+-->
+<!-- Uncomment this line if you want to echarts-stat extension
+<script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+-->
+<!-- Uncomment this line if you want to echarts-graph-modularity extension
+<script type="text/javascript" src="https://registry.npmmirror.com/echarts-graph-modularity/2/files/dist/echarts-graph-modularity.min.js"></script>
+-->
+<!-- Uncomment this line if you want to use map
+<script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+-->
+<!-- Uncomment these two lines if you want to use bmap extension
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+<script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.6.0/files/dist/extension/bmap.min.js"></script>
+-->
+
+<script type="text/javascript">
+  var dom = document.getElementById('container')
+  var myChart = echarts.init(dom, null, {
+    renderer: 'canvas',
+    useDirtyRect: false
+  })
+  var app = {}
+  var ROOT_PATH = '.'
+  var option
+
+  $.when(
+    $.get(ROOT_PATH + '/option-view.json'),
+    $.getScript(
+      'https://fastly.jsdelivr.net/npm/d3-hierarchy@2.0.0/dist/d3-hierarchy.min.js'
+    )
+  ).done(function(res) {
+    run(res[0])
+  })
+
+  function run(rawData) {
+    const dataWrap = prepareData(rawData)
+    initChart(dataWrap.seriesData, dataWrap.maxDepth)
+  }
+
+  function prepareData(rawData) {
+    const seriesData = []
+    let maxDepth = 0
+
+    function convert(source, basePath, depth) {
+      if (source == null) {
+        return
+      }
+      if (maxDepth > 5) {
+        return
+      }
+      maxDepth = Math.max(depth, maxDepth)
+      seriesData.push({
+        id: basePath,
+        value: source.$count,
+        depth: depth,
+        index: seriesData.length
+      })
+      for (var key in source) {
+        if (source.hasOwnProperty(key) && !key.match(/^\$/)) {
+          var path = basePath + '.' + key
+          convert(source[key], path, depth + 1)
+        }
+      }
+    }
+
+    convert(rawData, 'option', 0)
+    return {
+      seriesData: seriesData,
+      maxDepth: maxDepth
+    }
+  }
+
+  function initChart(seriesData, maxDepth) {
+    var displayRoot = stratify()
+
+    function stratify() {
+      return d3
+        .stratify()
+        .parentId(function(d) {
+          return d.id.substring(0, d.id.lastIndexOf('.'))
+        })(seriesData)
+        .sum(function(d) {
+          return d.value || 0
+        })
+        .sort(function(a, b) {
+          return b.value - a.value
+        })
+    }
+
+    function overallLayout(params, api) {
+      var context = params.context
+      d3
+        .pack()
+        .size([api.getWidth() - 16, api.getHeight() - 16])
+        .padding(3)(displayRoot)
+      context.nodes = {}
+      displayRoot.descendants().forEach(function(node, index) {
+        context.nodes[node.id] = node
+      })
+      debugger
+    }
+
+    function renderItem(params, api) {
+      var context = params.context
+      // Only do that layout once in each time `setOption` called.
+      if (!context.layout) {
+        context.layout = true
+        overallLayout(params, api)
+      }
+      var nodePath = api.value('id')
+      var node = context.nodes[nodePath]
+      if (!node) {
+        // Reder nothing.
+        return
+      }
+      var isLeaf = !node.children || !node.children.length
+      var focus = new Uint32Array(
+        node.descendants().map(function(node) {
+          return node.data.index
+        })
+      )
+      var nodeName = isLeaf
+        ? nodePath
+          .slice(nodePath.lastIndexOf('.') + 1)
+          .split(/(?=[A-Z][^A-Z])/g)
+          .join('\n')
+        : ''
+      var z2 = api.value('depth') * 2
+      return {
+        type: 'circle',
+        focus: focus,
+        shape: {
+          cx: node.x,
+          cy: node.y,
+          r: node.r
+        },
+        transition: ['shape'],
+        z2: z2,
+        textContent: {
+          type: 'text',
+          style: {
+            // transition: isLeaf ? 'fontSize' : null,
+            text: nodeName,
+            fontFamily: 'Arial',
+            width: node.r * 1.3,
+            overflow: 'truncate',
+            fontSize: node.r / 3
+          },
+          emphasis: {
+            style: {
+              overflow: null,
+              fontSize: Math.max(node.r / 3, 12)
+            }
+          }
+        },
+        textConfig: {
+          position: 'inside'
+        },
+        style: {
+          fill: api.visual('color')
+        },
+        emphasis: {
+          style: {
+            fontFamily: 'Arial',
+            fontSize: 12,
+            shadowBlur: 20,
+            shadowOffsetX: 3,
+            shadowOffsetY: 5,
+            shadowColor: 'rgba(0,0,0,0.3)'
+          }
+        }
+      }
+    }
+
+    option = {
+      dataset: {
+        source: seriesData
+      },
+      tooltip: {},
+      visualMap: [
+        {
+          show: false,
+          min: 0,
+          max: maxDepth,
+          dimension: 'depth',
+          inRange: {
+            color: ['#006edd', '#e0ffff']
+          }
+        }
+      ],
+      hoverLayerThreshold: Infinity,
+      series: {
+        type: 'custom',
+        renderItem: renderItem,
+        progressive: 0,
+        coordinateSystem: 'none',
+        encode: {
+          tooltip: 'value',
+          itemName: 'id'
+        }
+      }
+    }
+    myChart.setOption(option)
+    myChart.on('click', { seriesIndex: 0 }, function(params) {
+      drillDown(params.data.id)
+    })
+
+    function drillDown(targetNodeId) {
+      displayRoot = stratify()
+      if (targetNodeId != null) {
+        displayRoot = displayRoot.descendants().find(function(node) {
+          return node.data.id === targetNodeId
+        })
+      }
+      // A trick to prevent d3-hierarchy from visiting parents in this algorithm.
+      displayRoot.parent = null
+      myChart.setOption({
+        dataset: {
+          source: seriesData
+        }
+      })
+    }
+
+    // Reset: click on the blank area.
+    myChart.getZr().on('click', function(event) {
+      if (!event.target) {
+        drillDown()
+      }
+    })
+  }
+
+  if (option && typeof option === 'object') {
+    myChart.setOption(option)
+  }
+
+  window.addEventListener('resize', myChart.resize)
+</script>
+</body>
+</html>
