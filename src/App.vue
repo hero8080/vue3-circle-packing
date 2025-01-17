@@ -7,7 +7,7 @@ import CirclePacking from '@/components/CirclePacking/CirclePacking.vue'
     <div style="width: 500px;height: 300px;background-color: white">
       <CirclePacking animate>
         <template #default="{item}">
-          {{item}}
+          {{item.data.name}}
         </template>
       </CirclePacking>
     </div>

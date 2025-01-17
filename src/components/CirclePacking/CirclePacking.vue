@@ -24,9 +24,9 @@ function getNodeList(nodes) {
   nodes.forEach((node) => {
     const { children } = node
     const childrenNode = getNodeList(children)
-    const { depth, height, r, value, x, y } = node
+    const { depth, height, r, value, x, y ,data} = node
 
-    nodeList.push({ depth, height, r, value, x, y }, ...childrenNode)
+    nodeList.push({ depth, height, r, value, x, y ,data}, ...childrenNode)
   })
   return nodeList
 }

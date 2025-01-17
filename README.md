@@ -28,7 +28,7 @@ This template should help get you started developing with Vue 3 in Vite.
   <div style="width: 500px;height: 300px;background-color: white">
     <CirclePacking animate :data="data">
       <template #default="{item}">
-        {{item}}
+        {{item.name}}
       </template>
     </CirclePacking>
   </div>
