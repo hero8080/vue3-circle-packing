@@ -1,10 +1,19 @@
 <script setup lang="ts">
 import * as d3Hierarchy from 'd3-hierarchy'
-import { onMounted, ref } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import data from './data.json'
 import { CirclePacking } from '@antv/g2plot/src/index.ts'
 
+interface IProps {
+  animate?: boolean
+}
+
+const props = withDefaults(defineProps<IProps>(),{
+  animate:false
+})
+
 const container = ref()
+
 const renderNodeList = ref([])
 
 function getNodeList(nodes) {
@@ -67,7 +76,9 @@ onMounted(() => {
   <div ref="container" style="width: 100%; height: 100%; position: relative">
     <template v-for="(item, index) in renderNodeList" :key="index">
       <div class="circle-item" style="position: absolute" :style="getStyle(item)">
-        <div class="circle-item-child" :style="getDelay()"></div>
+        <div class="circle-item-child" :class="{animate:animate}" :style="getDelay()">
+          <slot v-bind="{item:item}"></slot>
+        </div>
       </div>
     </template>
   </div>
@@ -85,6 +96,8 @@ onMounted(() => {
   border-radius: 1000px;
   width: 100%;
   height: 100%;
+}
+.animate{
   animation-name: float;
   animation-duration: 3s; /* 动画持续时间 */
   animation-iteration-count: infinite; /* 无限循环 */

@@ -4,6 +4,34 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ![preview](./vue3-circle-packing.gif)
 
+## example
+
+```vue
+<script setup>
+  const data = [
+    {
+      "name": "Drama",
+      "value": 1046790
+    },
+    {
+      "name": "Drama",
+      "value": 1046790
+    },
+    ...
+  ]
+</script>
+
+<template>
+  <div style="width: 500px;height: 300px;background-color: white">
+    <CirclePacking animate :data="data">
+      <template #default="{item}">
+        {{item}}
+      </template>
+    </CirclePacking>
+  </div>
+</template>
+```
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
