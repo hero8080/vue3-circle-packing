@@ -10,11 +10,11 @@ This template should help get you started developing with Vue 3 in Vite.
 <script setup>
   const data = [
     {
-      "name": "Drama",
+      "name": "Drama1",
       "value": 1046790
     },
     {
-      "name": "Drama",
+      "name": "Drama2",
       "value": 1046790
     },
     {
@@ -26,9 +26,9 @@ This template should help get you started developing with Vue 3 in Vite.
 
 <template>
   <div style="width: 500px;height: 300px;background-color: white">
-    <CirclePacking animate :data="data">
+    <CirclePacking animate>
       <template #default="{item}">
-        {{item.name}}
+        {{item.data.name}}
       </template>
     </CirclePacking>
   </div>
