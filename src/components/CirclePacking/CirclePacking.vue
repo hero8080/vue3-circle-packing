@@ -8,8 +8,8 @@ interface IProps {
   animate?: boolean
 }
 
-const props = withDefaults(defineProps<IProps>(),{
-  animate:false
+const props = withDefaults(defineProps<IProps>(), {
+  animate: false,
 })
 
 const container = ref()
@@ -24,9 +24,9 @@ function getNodeList(nodes) {
   nodes.forEach((node) => {
     const { children } = node
     const childrenNode = getNodeList(children)
-    const { depth, height, r, value, x, y ,data} = node
+    const { depth, height, r, value, x, y, data } = node
 
-    nodeList.push({ depth, height, r, value, x, y ,data}, ...childrenNode)
+    nodeList.push({ depth, height, r, value, x, y, data }, ...childrenNode)
   })
   return nodeList
 }
@@ -35,8 +35,8 @@ function initChart(data: any[]) {
   const packLayout = (data) =>
     d3Hierarchy
       .pack()
-      .size([container.value.offsetHeight, container.value.offsetHeight - 30])
-      .padding(4)(
+      .size([container.value.offsetHeight - 20, container.value.offsetHeight - 20])
+      .padding(6)(
       d3Hierarchy
         .hierarchy(data)
         .sum((d) => d.value)
@@ -48,12 +48,12 @@ function initChart(data: any[]) {
 }
 
 function getStyle(item) {
-  const itemSize = container.value.offsetHeight
-  const offsetWidth = container.value.offsetWidth
+  const itemSize = container.value.offsetHeight - 20
+  const offsetWidth = container.value.offsetWidth - 20
   const scaleX = offsetWidth / itemSize
   return {
-    left: item.x * scaleX + 'px',
-    top: item.y + 30 / 2 + 'px',
+    left: item.x * scaleX + 20 / 2 + 'px',
+    top: item.y + 20 / 2 + 5 + 'px',
     width: item.r * 2 + 'px',
     height: item.r * 2 + 'px',
   }
@@ -76,8 +76,8 @@ onMounted(() => {
   <div ref="container" style="width: 100%; height: 100%; position: relative">
     <template v-for="(item, index) in renderNodeList" :key="index">
       <div class="circle-item" style="position: absolute" :style="getStyle(item)">
-        <div class="circle-item-child" :class="{animate:animate}" :style="getDelay()">
-          <slot v-bind="{item:item,index,data:renderNodeList}"></slot>
+        <div class="circle-item-child" :class="{ animate: animate }" :style="getDelay()">
+          <slot v-bind="{ item: item, index, data: renderNodeList }"></slot>
         </div>
       </div>
     </template>
@@ -97,7 +97,8 @@ onMounted(() => {
   width: 100%;
   height: 100%;
 }
-.animate{
+
+.animate {
   animation-name: float;
   animation-duration: 3s; /* 动画持续时间 */
   animation-iteration-count: infinite; /* 无限循环 */
@@ -109,20 +110,11 @@ onMounted(() => {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px); /* 向上移动20像素 */
+    transform: translateY(-10px); /* 向上移动20像素 */
   }
   100% {
     transform: translateY(0);
   }
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
 </style>
