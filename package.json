@@ -13,6 +13,10 @@
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hero8080/vue3-circle-packing.git"
+  },
   "files": [
     "dist",
     "vue3-circle-packing.gif"
