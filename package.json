@@ -1,7 +1,6 @@
 {
   "name": "vue3-circle-packing",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/vue3-circle-packing.es.js",
   "scripts": {
