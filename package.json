@@ -14,7 +14,8 @@
     "format": "prettier --write src/"
   },
   "files": [
-    "dist"
+    "dist",
+    "vue3-circle-packing.gif"
   ],
   "dependencies": {
     "@antv/g2plot": "^2.4.32",
