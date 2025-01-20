@@ -77,7 +77,7 @@ onMounted(() => {
     <template v-for="(item, index) in renderNodeList" :key="index">
       <div class="circle-item" style="position: absolute" :style="getStyle(item)">
         <div class="circle-item-child" :class="{animate:animate}" :style="getDelay()">
-          <slot v-bind="{item:item}"></slot>
+          <slot v-bind="{item:item,index,data:renderNodeList}"></slot>
         </div>
       </div>
     </template>
