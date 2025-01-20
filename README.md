@@ -2,7 +2,7 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-![preview](vue3-circle-packing.gif)
+![preview](https://github.com/hero8080/vue3-circle-packing/raw/master/vue3-circle-packing.gif)
 
 ## example
 
