@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import * as d3Hierarchy from 'd3-hierarchy'
-import { onMounted, reactive, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import data from './data.json'
-import { CirclePacking } from '@antv/g2plot/src/index.ts'
+// import { CirclePacking } from '@antv/g2plot/src/index.ts'
 
 interface IProps {
   animate?: boolean
@@ -91,7 +91,6 @@ onMounted(() => {
 }
 
 .circle-item-child {
-  border: 1px solid red;
   position: absolute;
   border-radius: 1000px;
   width: 100%;
