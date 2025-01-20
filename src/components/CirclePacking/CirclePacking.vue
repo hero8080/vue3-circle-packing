@@ -1,15 +1,24 @@
 <script setup lang="ts">
 import * as d3Hierarchy from 'd3-hierarchy'
-import { onMounted, ref } from 'vue'
-import data from './data.json'
+import { onMounted, ref, watch } from 'vue'
+// import data from './data.json'
+
 // import { CirclePacking } from '@antv/g2plot/src/index.ts'
+interface IData {
+  name?: string
+  value: number
+}
 
 interface IProps {
   animate?: boolean
+  data: IData[]
 }
 
 const props = withDefaults(defineProps<IProps>(), {
   animate: false,
+  data() {
+    return []
+  },
 })
 
 const container = ref()
@@ -31,7 +40,7 @@ function getNodeList(nodes) {
   return nodeList
 }
 
-function initChart(data: any[]) {
+function initChart(data: any) {
   const packLayout = (data) =>
     d3Hierarchy
       .pack()
@@ -68,8 +77,21 @@ function getDelay() {
 }
 
 onMounted(() => {
-  initChart(data)
+  initChart({
+    name: 'root',
+    children: props.data,
+  })
 })
+
+watch(
+  () => props.data,
+  () => {
+    initChart({
+      name: 'root',
+      children: props.data,
+    })
+  },
+)
 </script>
 
 <template>
@@ -115,5 +137,4 @@ onMounted(() => {
     transform: translateY(0);
   }
 }
-
 </style>
